@@ -1,0 +1,60 @@
+.faq {
+  padding-left: 30px;
+  max-width: 730px;
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &-title {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 700;
+      &:before {
+        position: absolute;
+        left: -15px;
+        width: 10px;
+        height: 10px;
+        content: "";
+        display: block;
+        border: 1px solid #00BFB4;
+        border-radius: 90px;
+        background-color: #00BFB4;
+        transform: translateY(50%) translateX(-50%);
+      }
+      &:after {
+        content: url("../images/arrow1.svg");
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        transform: rotate(180deg);
+        transition: transform 0.5s linear;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &.active:after {
+        transform: rotate(0deg);
+      }
+    }
+    &-text {
+      max-width: 670px;
+      padding-top: 10px;
+      line-height: 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s max-height ease-out;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .faq {
+    max-width: 770px;
+    &__item-text {
+      max-width: 710px;
+    }
+  }
+}

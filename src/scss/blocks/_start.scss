@@ -1,0 +1,43 @@
+.start-list {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    position: relative;
+    display: flex;
+    max-width: 335px ;
+    &:not(:last-child):after {
+      content: url("../images/arrow.png");
+      position: absolute;
+      top: 35px;
+      right: -45px;
+    }
+  }
+  &__item-number {
+    font-size: 75px;
+    line-height: 75px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  &__item-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .start-list {
+    &__item {
+      max-width: 270px;
+      &:nth-of-type(1) {
+        max-width: 290px;
+      }
+      &:not(:last-child):after {
+        right: -40px;
+        top: 55px;
+      }
+      &-number {
+        margin-top: 20px;
+      }
+    }
+  }
+}

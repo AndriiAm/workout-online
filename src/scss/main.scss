@@ -1,0 +1,107 @@
+@import "blocks/header";
+@import "blocks/banner";
+@import "blocks/aboutUs";
+@import "blocks/start";
+@import "blocks/features";
+@import "blocks/pricing";
+@import "blocks/feedback";
+@import "blocks/faq";
+@import "blocks/form";
+@import "blocks/footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 100px 0;
+  &--light {
+    background-color: white;
+  }
+  &--purple {
+    background-color: #7036BA;
+  }
+  &__title {
+    text-align: center;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 700;
+    &--light {
+      color: white;
+    }
+    &--dark {
+      color: #333333;
+    }
+  }
+  &__subtitle {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    &--light {
+      color: white;
+    }
+    &--dark {
+      color: #333333;
+    }
+  }
+  &__content {
+    margin-top: 50px;
+    &--light {
+      color: white;
+    }
+    &--dark {
+      color: #333333;
+    }
+  }
+}
+
+.button {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  &--start {
+    width: 264px;
+    height: 65px;
+    padding: 20px 50px;
+    background-color: #00BFB4;
+    font-size: 25px;
+    line-height: 100%;
+    border: 2px solid #00BFB4;
+    &:hover {
+      background-color: white;
+      color: #00BFB4;
+    }
+  }
+  &--choose {
+    width: 132px;
+    height: 55px;
+    border: 2px solid white;
+    padding: 15px 29px;
+    font-size: 20px;
+    line-height: 25px;
+    &:hover {
+      background-color: white;
+      color: #A76BF2;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}

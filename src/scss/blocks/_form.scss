@@ -1,0 +1,20 @@
+.form {
+  margin: 0 auto;
+  max-width: 540px;
+  & > label {
+    line-height: 20px;
+  }
+  &__input {
+    margin-bottom: 30px;
+    &:not(:last-child) {
+      width: 100%;
+      height: 45px;
+      padding-left: 10px;
+      font-size: 18px;
+      margin: 10px 0 15px;
+      &:focus {
+        outline-color: #00BFB4;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.about-us {
+  &__video-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .about-us__video {
+    max-width: 450px;
+    height: 270px;
+  }
+}

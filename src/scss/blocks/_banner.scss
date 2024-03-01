@@ -1,0 +1,37 @@
+.banner {
+  & > .container {
+    margin-left: 0;
+  }
+  &__inner {
+    height: 800px;
+    position: relative;
+  }
+  background-color: #7036BA;
+
+  &__background-photo {
+    width: 49%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 800px;
+    background: url("../images/background/banner_background.png") center (center/cover) no-repeat;
+  }
+  &__text {
+    padding-top: 220px;
+    max-width: 525px;
+    margin-left: 0;
+    text-align: left;
+    color: white;
+  }
+  &__title {
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: 700;
+  }
+  &__subtitle {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}

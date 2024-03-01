@@ -1,0 +1,34 @@
+.header {
+  position: relative;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    list-style-type: none;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    transition: all linear 0.3s;
+    text-decoration: none;
+    &:hover {
+      color: #8A8A8A;
+    }
+  }
+}

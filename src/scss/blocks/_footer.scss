@@ -1,0 +1,21 @@
+.footer {
+  background-color: #7036BA;
+  color: white;
+  line-height: 25px;
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__terms > a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__copyrights {
+    font-size: 20px;
+  }
+}
