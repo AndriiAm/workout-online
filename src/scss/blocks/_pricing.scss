@@ -49,3 +49,32 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+    &__item {
+      width: 450px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing {
+    &__item {
+      width: 510px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .pricing {
+    &__item {
+      width: 330px;
+    }
+  }
+}

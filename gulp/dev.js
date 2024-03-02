@@ -30,7 +30,7 @@ const plumberNotify = (title) => {
     }
 }
 
-gulp.task("includeFiles:dev", function() {
+gulp.task("html:dev", function() {
     return gulp
         .src("./src/*.html")
         .pipe(changed("./build/", {hasChanged: changed.compareContents}))
@@ -87,7 +87,7 @@ gulp.task("startServer:dev", function () {
 
 gulp.task("watch:dev", function () {
     gulp.watch("./src/scss/**/*.scss", gulp.parallel("scss:dev"));
-    gulp.watch("./src/**/*.html", gulp.parallel("includeFiles:dev"));
+    gulp.watch("./src/**/*.html", gulp.parallel("html:dev"));
     gulp.watch("./src/images/**/*", gulp.parallel("copyImages:dev"));
     gulp.watch("./src/images/**/*", gulp.parallel("copyFonts:dev"));
     gulp.watch("./src/js/**/*", gulp.parallel("js:dev"));

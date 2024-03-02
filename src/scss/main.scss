@@ -100,8 +100,41 @@
   }
 }
 
+._lock {
+  overflow: hidden;
+}
+
+.section__content--features {
+  margin-top: 75px;
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  .section {
+    padding: 50px 0;
+    &__title {
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 360px;
   }
 }

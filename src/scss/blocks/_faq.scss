@@ -10,6 +10,8 @@
       font-size: 20px;
       line-height: 25px;
       font-weight: 700;
+      margin-bottom: 5px;
+      transition: margin-bottom 0.3s linear;
       &:before {
         position: absolute;
         left: -15px;
@@ -23,29 +25,36 @@
         transform: translateY(50%) translateX(-50%);
       }
       &:after {
-        content: url("../images/arrow1.svg");
+        content: url("../images/icons/accordion_arrow.svg");
         display: block;
         position: absolute;
         top: 0;
         right: 0;
         z-index: 5;
         transform: rotate(180deg);
-        transition: transform 0.5s linear;
+        transition: transform 0.3s linear;
       }
       &:hover {
         cursor: pointer;
       }
-      &.active:after {
-        transform: rotate(0deg);
+      &.active {
+        margin-bottom: 0;
+        &:after {
+          transform: rotate(0deg);
+        }
       }
     }
     &-text {
-      max-width: 670px;
-      padding-top: 10px;
+      max-width: calc(100% - 30px);
+      padding-top: 0;
+      box-sizing: content-box;
       line-height: 20px;
       max-height: 0;
       overflow: hidden;
-      transition: 0.5s max-height ease-out;
+      transition: 0.3s all ease-out;
+      &._active {
+        padding-top: 10px;
+      }
     }
   }
 }
@@ -53,8 +62,8 @@
 @media (max-width: 1199px) {
   .faq {
     max-width: 770px;
-    &__item-text {
-      max-width: 710px;
-    }
   }
 }
+
+
+

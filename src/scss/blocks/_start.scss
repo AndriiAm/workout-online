@@ -6,21 +6,21 @@
     display: flex;
     max-width: 335px ;
     &:not(:last-child):after {
-      content: url("../images/arrow.png");
+      content: url("../images/icons/dotted_arrow.png");
       position: absolute;
       top: 35px;
       right: -45px;
     }
-  }
-  &__item-number {
-    font-size: 75px;
-    line-height: 75px;
-    font-weight: 600;
-    margin-right: 10px;
-  }
-  &__item-text {
-    font-size: 20px;
-    line-height: 25px;
+    &-number {
+      font-size: 75px;
+      line-height: 75px;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+    &-text {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -38,6 +38,44 @@
       &-number {
         margin-top: 20px;
       }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .start-list {
+      flex-direction: column;
+    &__item {
+      max-width: 95%;
+      &:after {
+        display: none;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &:nth-of-type(1) {
+        max-width: 95%;
+      }
+      &-number {
+        display: block;
+        margin-top: -20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .start-list__item {
+    &-number {
+      margin-top: -10px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .start-list__item {
+    &-number {
+      margin-top: 15px;
     }
   }
 }
