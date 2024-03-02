@@ -2,7 +2,7 @@ const swiper = () => new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    speed: 1000,
+    speed: 500,
 
     // Navigation arrows
     navigation: {
